@@ -1,5 +1,5 @@
 {
-  "name": "paint-dispatcher",
+  "name": "paint-workers",
   "main": "paint-dispatcher/src/index.ts",
   "compatibility_date": "2025-08-01",
   "workers_dev": false,
@@ -11,7 +11,7 @@
   ],
   "dispatch_namespaces": [
     {
-      "binding": "DISPATCHER",
+      "binding": "customer-worker-1",
       "namespace": "paint-workers"
     }
   ],
