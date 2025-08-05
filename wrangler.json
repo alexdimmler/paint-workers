@@ -1,0 +1,56 @@
+{
+  "name": "paint-dispatcher",
+  "main": "paint-dispatcher/src/index.ts",
+  "compatibility_date": "2025-08-01",
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "dependablepainting.work/*",
+      "zone_id": "feab5fbb3c536331ecf14332705fcf8b"
+    }
+  ],
+  "dispatch_namespaces": [
+    {
+      "binding": "DISPATCHER",
+      "namespace": "paint-workers"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "PAINTER_KVBINDING",
+      "id": "11034649f22b4115adbdbe97586bbc69"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "PAINT_BUCKET",
+      "bucket_name": "paint-bucket"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "PAINTERS_DB",
+      "database_name": "painters_d1",
+      "database_id": "5fb255c0-da76-4fb1-8..."
+    },
+    {
+      "binding": "PAINTER_D1DATA",
+      "database_name": "painter-d1data",
+      "database_id": "eab53c10-dfb4-4d67-9..."
+    }
+  ],
+  "queues": [
+    {
+      "binding": "PAINTER_QUEUES",
+      "queue_name": "painter-queues"
+    },
+    {
+      "binding": "PAINT_JOBS",
+      "queue_name": "paint-jobs"
+    },
+    {
+      "binding": "DEAD_QUEUES",
+      "queue_name": "dead-queues"
+    }
+  ]
+}
