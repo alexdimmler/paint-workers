@@ -38,19 +38,6 @@
       "database_name": "painter-d1data",
       "database_id": "eab53c10-dfb4-4d67-9d70-84675ce1f95c"
     }
-  ],
-  "queues": [
-    {
-      "binding": "PAINTER_QUEUES",
-      "queue_name": "painter-queues"
-    },
-    {
-      "binding": "PAINT_JOBS",
-      "queue_name": "paint-jobs"
-    },
-    {
-      "binding": "DEAD_QUEUES",
-      "queue_name": "dead-queues"
-    }
   ]
 }
+
