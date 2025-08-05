@@ -1,0 +1,26 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "customer-worker-1",
+	"main": "src/index.js",
+	"compatibility_date": "2025-08-03",
+	"assets": {
+		"directory": "./public"
+	},
+	"services": [{
+		"binding": "paint-workers",
+		"service": "paint-dispatcher"
+	}],
+	"kv_namespaces": [
+		{ "binding": "PAINTER_KVBINDING", "id": "11034649f22b4115adbdbe97586bbc69" }
+	],
+	"r2_buckets": [
+		{ "binding": "paint-bucket", "bucket_name": "paint-bucket" }
+	],
+	"analytics_engine_datasets": [
+		{ "binding": "ANALYTICS_ENGINE", "dataset": "analytics_events" }
+	],
+	"vars": {
+		"EMAIL_ENDPOINT": "https://api.resend.com/emails",
+		"DESTINATION_EMAIL": "just-paint-it@dependablepainting.work"
+	}
+}

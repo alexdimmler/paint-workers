@@ -1,0 +1,58 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "paint-dispatcher",
+  "main": "src/index.js",
+  "compatibility_date": "2025-08-03",
+  "observability": {
+    "enabled": true
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "analytics_engine_datasets": [
+    {
+      "binding": "analytics_events",
+      "dataset": "ANALYTICS_ENGINE"
+    }
+  ],
+  "dispatch_namespaces": [
+    {
+      "binding": "customer-worker-1",
+      "namespace": "paint-workers"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "painters_d1",
+      "database_id": "5fb255c0-da76-4fb1-8721-e9c72f2fc84f"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "PAINTER_KVBINDING",
+      "id": "11034649f22b4115adbdbe97586bbc69"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "paint-bucket",
+      "bucket_name": "paint-bucket"
+    }
+  ],
+  "services": [
+    {
+      "binding": "paint-dispatcher",
+      "service": "paint-dispatcher"
+    }
+  ],
+
+  "queues": {
+    "producers": [
+      {
+        "queue": "painter-queues",
+        "binding": "TASK_QUEUE"
+      }
+    ]
+  }
+}
